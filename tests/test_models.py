@@ -158,7 +158,7 @@ class TestProductModel(unittest.TestCase):
         self.assertEqual(len(Product.all()), 5)
 
 
-    def test_find_product_by_name(self):
+    def test_find_by_name(self):
         """It should Find Products by Name"""
         product = ProductFactory(name="Hat")
         product.create()
@@ -168,7 +168,7 @@ class TestProductModel(unittest.TestCase):
         self.assertEqual(found[0].name, "Hat")
 
 
-    def test_find_product_by_category(self):
+    def test_find_by_category(self):
         """It should Find Products by Category"""
         product = ProductFactory(category=Category.CLOTHS)
         product.create()
